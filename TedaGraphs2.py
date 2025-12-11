@@ -205,10 +205,10 @@ def plot_DSI(teda,w=6,h=4,rect =[0,0,1,1],out=None,name=None,lnwdth=0.75,ftcks=7
     for i in range(len(xr)):
         plt.plot(xr[i],yr[i],linestyle=' ',linewidth=lnwdth, marker='o', markersize = m1,label = names[i])
     plt.plot([0,endX],[eolDSI,eolDSI], color='black', linewidth=lnwdth, linestyle=':')
-    plt.plot([teda.eolX,teda.eolX],[-1,1], color='black', linewidth=lnwdth, linestyle=':')
+    plt.plot([teda.eolX,teda.eolX],[-0.1,1], color='black', linewidth=lnwdth, linestyle=':')
     plt.plot(teda.eolX, eolDSI, marker='x', color='black', markersize=m2, linestyle='',markeredgewidth=m3, label='EOL')
-    plt.xlim(startX, endX)
-    plt.ylim(startY, endY)
+    #plt.xlim(startX, endX)
+    #plt.ylim(startY, endY)
     plt.xticks( fontsize=ftcks, color='black')
     plt.yticks( fontsize=ftcks, color='black')
     plt.xlabel("Cycle",fontsize=flbl)  # Nome do eixo X
