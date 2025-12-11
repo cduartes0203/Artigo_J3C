@@ -129,8 +129,8 @@ def rank_sequence(vector):
 
 def calculate_trendability(x):
     t = np.array([i+1 for i in range(len(x))])
-
-    K = len(x)
+    t = t/1e6
+    K = len(x)+1
     s_xt = np.sum(x*t)
     s_x = np.sum(x)
     s_x2 = np.sum(x**2)
@@ -140,7 +140,7 @@ def calculate_trendability(x):
     n = (K*s_xt) -(s_x*s_t)
     if n == 0:
         return 0
-    
+
     d =math.sqrt(((K*s_x2)-(s_x**2))*((K*s_t2)-(s_t**2)))
     
     if d == 0:
