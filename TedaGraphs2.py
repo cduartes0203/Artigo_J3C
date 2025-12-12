@@ -8,6 +8,7 @@ import plotly.express as px
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from matplotlib.patches import ConnectionPatch
 import matplotlib.gridspec as gridspec
+import matplotlib.cm as cm
 
 def cm(x):
     return x/2.54

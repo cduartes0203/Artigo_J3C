@@ -309,7 +309,7 @@ def plot_metrics(df,out, cols_qtd, brng, show=True, w=12, h=6):
         metrics = np.abs(metrics)
 
         # 🔹 Filtrar colunas com métricas > 0.5
-        if metrics[0] > 0.5 and metrics[1] > 0.5:
+        if metrics[0] > 0.4 and metrics[1] > 0.4:
             df_r[column] = df[column]
 
         # 🔹 Criar gráfico de barras
