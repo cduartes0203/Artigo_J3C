@@ -231,8 +231,8 @@ def plot_dataframe2(df, df2, df3,label = '1',label1 = '2',label2 = '3'):
     plt.show()
 
 
-def plot_features(df, cols_qtd, brng, show=True, w=12, h=6):
-
+def plot_features(df, cols_qtd, brng, show=True, w=12, h=6,ylim = [None,None]):
+    yL, yU = ylim
     nc = cols_qtd  # Número de colunas
     nr = -(-df.shape[1] // nc)  # Cálculo do número de linhas (ceil)
 
@@ -251,6 +251,7 @@ def plot_features(df, cols_qtd, brng, show=True, w=12, h=6):
     # Loop sobre cada coluna do DataFrame e adiciona ao subplot correspondente
     for i, column in enumerate(df.columns):
         axes[i].plot(df.index, df[column], label=column)
+        axes[i].set_ylim(yL, yU)
         axes[i].set_title(column, fontsize=10)
         axes[i].grid(True)
         axes[i].tick_params(axis="both", labelsize=8)
